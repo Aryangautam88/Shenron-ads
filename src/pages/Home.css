@@ -1,0 +1,297 @@
+
+/* =====================================
+   HOME HERO
+===================================== */
+
+.home-hero {
+    position: relative;
+    width: 100%;
+    min-height: 900px;
+    overflow: hidden;
+  
+    /* Keep your global purple background visible */
+    background: transparent;
+    color: #fff;
+  }
+  
+  .home-hero-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.35fr 0.85fr;
+    gap: 50px;
+  
+    width: min(1100px, calc(100% - 64px));
+    margin: 0 auto;
+    padding-top: 66px;
+  }
+  
+  /* =====================================
+     LEFT CONTENT
+  ===================================== */
+  
+  .hero-left {
+    position: relative;
+    z-index: 2;
+    min-width: 0;
+  }
+  
+  .hero-eyebrow {
+    display: block;
+    margin-bottom: 16px;
+  
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  .hero-title {
+    max-width: 760px;
+    margin: 0;
+  
+    color: #fff;
+    font-size: clamp(38px, 4vw, 53px);
+    font-weight: 750;
+    line-height: 1.17;
+    letter-spacing: -1.8px;
+  }
+  
+  .hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  
+    margin-top: 40px;
+    padding: 16px 27px;
+  
+    color: #fff;
+    background: #3929ed;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  
+    font-size: 15px;
+    font-weight: 650;
+    text-decoration: none;
+  
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      background 0.25s ease;
+  }
+  
+  .hero-button span {
+    font-size: 23px;
+    line-height: 1;
+    transition: transform 0.25s ease;
+  }
+  
+  .hero-button:hover {
+    background: #593cf5;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(91, 55, 255, 0.3);
+  }
+  
+  .hero-button:hover span {
+    transform: translateX(4px);
+  }
+  
+  /* =====================================
+     DASHBOARD IMAGE
+  ===================================== */
+  
+  .hero-dashboard {
+    position: relative;
+    width: min(100%, 510px);
+  
+    margin-top: 28px;
+    margin-left: 110px;
+  }
+  
+  .hero-dashboard img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: top center;
+  }
+  
+  /* =====================================
+     RIGHT CONTENT
+  ===================================== */
+  
+  .hero-right {
+    position: relative;
+    min-width: 0;
+    padding-top: 0;
+  }
+  
+  .hero-rings {
+    position: relative;
+    width: calc(100% + 100px);
+    max-width: 520px;
+    margin-left: -5px;
+    margin-top: 0;
+  }
+  
+  .hero-rings img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .hero-description {
+    max-width: 310px;
+    margin-top: 28px;
+    margin-left: 0;
+  
+    color: rgba(255, 255, 255, 0.94);
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: -0.25px;
+  }
+  
+  /* =====================================
+     LAPTOPS
+  ===================================== */
+  
+  @media (max-width: 1200px) {
+    .home-hero-inner {
+      width: min(1000px, calc(100% - 60px));
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 35px;
+    }
+  
+    .hero-title {
+      font-size: clamp(38px, 4.3vw, 49px);
+    }
+  
+    .hero-dashboard {
+      margin-left: 65px;
+    }
+  
+    .hero-description {
+      font-size: 19px;
+    }
+  }
+  
+  /* =====================================
+     TABLETS
+  ===================================== */
+  
+  @media (max-width: 900px) {
+    .home-hero {
+      min-height: auto;
+    }
+  
+    .home-hero-inner {
+      grid-template-columns: 1fr;
+      gap: 35px;
+  
+      width: calc(100% - 48px);
+      padding-top: 55px;
+    }
+  
+    .hero-title {
+      max-width: 700px;
+      font-size: clamp(38px, 6.5vw, 55px);
+    }
+  
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    .hero-rings {
+      width: min(75%, 450px);
+      margin-left: auto;
+    }
+  
+    .hero-description {
+      max-width: 450px;
+      align-self: flex-start;
+      margin-top: 0;
+      font-size: 19px;
+    }
+  
+    .hero-dashboard {
+      width: min(100%, 500px);
+      margin: 35px auto 0;
+    }
+  }
+  
+  /* =====================================
+     MOBILE
+  ===================================== */
+  
+  @media (max-width: 600px) {
+    .home-hero-inner {
+      width: calc(100% - 40px);
+      padding-top: 42px;
+      gap: 28px;
+    }
+  
+    .hero-eyebrow {
+      margin-bottom: 14px;
+      font-size: 11px;
+    }
+  
+    .hero-title {
+      font-size: clamp(32px, 8.5vw, 43px);
+      line-height: 1.16;
+      letter-spacing: -1.2px;
+    }
+  
+    .desktop-break {
+      display: none;
+    }
+  
+    .hero-button {
+      margin-top: 25px;
+      padding: 14px 21px;
+      font-size: 14px;
+    }
+  
+    .hero-right {
+      align-items: flex-end;
+      gap: 18px;
+    }
+  
+    .hero-rings {
+      width: 85%;
+      max-width: 360px;
+      margin-right: -15px;
+    }
+  
+    .hero-description {
+      width: 100%;
+      max-width: 340px;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+  
+    .hero-dashboard {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Smaller phones */
+  @media (max-width: 380px) {
+    .home-hero-inner {
+      width: calc(100% - 32px);
+    }
+  
+    .hero-title {
+      font-size: 31px;
+    }
+  
+    .hero-description {
+      font-size: 16px;
+    }
+  }
+  
