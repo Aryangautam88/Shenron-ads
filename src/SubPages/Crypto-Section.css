@@ -1,0 +1,869 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* =========================================
+   CRYPTO SERVICES SECTION
+========================================= */
+
+.crypto-section {
+    --crypto-purple: #3028f4;
+    --crypto-text: #080808;
+
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    overflow: hidden;
+
+    /* Transparent section background */
+    background: transparent;
+
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+
+    padding: clamp(42px, 5vw, 76px) 24px;
+    box-sizing: border-box;
+}
+
+.crypto-section *,
+.crypto-section *::before,
+.crypto-section *::after {
+    box-sizing: border-box;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.crypto-heading {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    min-height: 95px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto clamp(60px, 7vw, 105px);
+}
+
+.crypto-heading h2 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+    color: #fff;
+    font-family: inherit;
+
+    font-size: clamp(36px, 4.2vw, 68px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+
+    text-align: center;
+}
+
+/* =========================================
+   LEFT RING IMAGE
+========================================= */
+
+.crypto-ring-image {
+    position: absolute;
+    z-index: 1;
+
+    width: clamp(180px, 32vw, 550px);
+    height: auto;
+    max-height: 210px;
+
+    left: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: block;
+    object-fit: contain;
+    object-position: left center;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+/* =========================================
+   SERVICE CARD CONTAINER
+========================================= */
+
+.crypto-container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 982px;
+
+    margin-inline: auto;
+}
+
+/* =========================================
+   PREMIUM CARD
+========================================= */
+
+.crypto-card {
+    width: 100%;
+    overflow: hidden;
+
+    background: rgba(245, 243, 243, 0.96);
+    color: var(--crypto-text);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 28px;
+
+    box-shadow: none;
+}
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.crypto-card-header {
+    padding: 25px 28px 30px;
+    text-align: center;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+}
+
+.crypto-card-header h3 {
+    margin: 0 0 5px;
+
+    color: #080808;
+    font-family: inherit;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.crypto-card-header>p {
+    margin: 0;
+
+    color: #080808;
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* =========================================
+   PRICING
+========================================= */
+
+.crypto-price {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    column-gap: 8px;
+    row-gap: 4px;
+
+    margin-top: 14px;
+}
+
+.crypto-price strong {
+    color: #080808;
+    font-family: inherit;
+
+    font-size: clamp(25px, 2vw, 30px);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.crypto-price>span {
+    color: #080808;
+    font-family: inherit;
+
+    font-size: clamp(14px, 1.15vw, 18px);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.crypto-card-body {
+    padding: 22px 26px 25px;
+}
+
+.crypto-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.crypto-features li {
+    position: relative;
+
+    padding-left: 13px;
+
+    color: #080808;
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+.crypto-features li::before {
+    content: "";
+
+    position: absolute;
+    top: 0.67em;
+    left: 0;
+
+    width: 5px;
+    height: 5px;
+
+    background: #080808;
+    border-radius: 50%;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.crypto-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    min-height: 48px;
+    margin-top: 24px;
+    padding: 0 25px;
+
+    border: 1px solid transparent;
+    border-radius: 50px;
+
+    background: var(--crypto-purple);
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.crypto-button span {
+    font-size: 21px;
+    line-height: 1;
+
+    transition: transform 0.25s ease;
+}
+
+.crypto-button:hover {
+    background: #453dff;
+    color: #fff;
+
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(48, 40, 244, 0.2);
+}
+
+.crypto-button:hover span {
+    transform: translateX(3px);
+}
+
+/* =========================================
+   LAPTOP: 1200px
+========================================= */
+
+@media (max-width: 1200px) {
+    .crypto-section {
+        padding-inline: 32px;
+    }
+
+    .crypto-container {
+        max-width: 900px;
+    }
+
+    .crypto-ring-image {
+        width: clamp(180px, 28vw, 340px);
+    }
+}
+
+/* =========================================
+   TABLET: 850px
+========================================= */
+
+@media (max-width: 850px) {
+    .crypto-section {
+        padding: 48px 24px;
+    }
+
+    .crypto-heading {
+        min-height: 80px;
+        margin-bottom: 65px;
+    }
+
+    .crypto-heading h2 {
+        font-size: clamp(34px, 5.5vw, 48px);
+        letter-spacing: -0.8px;
+    }
+
+    .crypto-ring-image {
+        width: 230px;
+        max-height: 150px;
+        left: -55px;
+        opacity: 0.7;
+    }
+
+    .crypto-container {
+        max-width: 720px;
+    }
+
+    .crypto-card {
+        border-radius: 23px;
+    }
+
+    .crypto-card-header {
+        padding: 24px 20px 27px;
+    }
+
+    .crypto-price {
+        margin-top: 26px;
+    }
+
+    .crypto-card-body {
+        padding: 22px 23px 24px;
+    }
+
+    .crypto-features {
+        gap: 13px;
+    }
+
+    .crypto-features li {
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   MOBILE: 600px
+========================================= */
+
+@media (max-width: 600px) {
+    .crypto-section {
+        padding: 38px 16px;
+    }
+
+    .crypto-heading {
+        min-height: 70px;
+        margin-bottom: 42px;
+    }
+
+    .crypto-heading h2 {
+        font-size: clamp(30px, 7.5vw, 40px);
+        letter-spacing: -0.6px;
+    }
+
+    .crypto-ring-image {
+        width: 135px;
+        max-height: 100px;
+
+        left: -38px;
+        opacity: 0.45;
+    }
+
+    .crypto-container {
+        max-width: 100%;
+    }
+
+    .crypto-card {
+        border-radius: 19px;
+    }
+
+    .crypto-card-header {
+        padding: 23px 15px 22px;
+    }
+
+    .crypto-card-header h3 {
+        font-size: 15px;
+    }
+
+    .crypto-card-header>p {
+        font-size: 12px;
+    }
+
+    .crypto-price {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+
+        margin-top: 23px;
+    }
+
+    .crypto-price strong {
+        font-size: 27px;
+    }
+
+    .crypto-price>span {
+        max-width: 100%;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .crypto-card-body {
+        padding: 22px 17px;
+    }
+
+    .crypto-features {
+        gap: 12px;
+    }
+
+    .crypto-features li {
+        padding-left: 13px;
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .crypto-button {
+        min-height: 45px;
+        margin-top: 22px;
+        padding-inline: 21px;
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE: 400px
+========================================= */
+
+@media (max-width: 400px) {
+    .crypto-section {
+        padding: 32px 12px;
+    }
+
+    .crypto-heading {
+        min-height: 60px;
+        margin-bottom: 32px;
+    }
+
+    .crypto-heading h2 {
+        font-size: 39px;
+        letter-spacing: -0.7px;
+    }
+
+    .crypto-ring-image {
+        width: 95px;
+        max-height: 75px;
+
+        left: -25px;
+        opacity: 0.35;
+    }
+
+    .crypto-card {
+        border-radius: 16px;
+    }
+
+    .crypto-card-header {
+        padding: 20px 12px;
+    }
+
+    .crypto-card-body {
+        padding: 19px 13px 20px;
+    }
+
+    .crypto-features {
+        gap: 11px;
+    }
+
+    .crypto-features li {
+        font-size: 12.5px;
+    }
+
+    .crypto-price strong {
+        font-size: 25px;
+    }
+
+    .crypto-price>span {
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   EXTRA SMALL MOBILE: 320px
+========================================= */
+
+@media (max-width: 320px) {
+    .crypto-section {
+        padding-inline: 9px;
+    }
+
+    .crypto-heading h2 {
+        font-size: 26px;
+    }
+
+    .crypto-ring-image {
+        width: 75px;
+        left: -18px;
+    }
+
+    .crypto-card-header {
+        padding-inline: 9px;
+    }
+
+    .crypto-card-body {
+        padding-inline: 11px;
+    }
+
+    .crypto-features li {
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .crypto-button,
+    .crypto-button span {
+        transition: none;
+    }
+}
+
+
+/*------------------------------------------ Second page--------------------------- */
+
+/* =========================================
+   CRYPTO OVERVIEW
+========================================= */
+
+.crypto-overview-section {
+    width: 100%;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background: transparent;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+
+    padding: clamp(35px, 4vw, 65px) 24px;
+    box-sizing: border-box;
+}
+
+.crypto-overview-section *,
+.crypto-overview-section *::before,
+.crypto-overview-section *::after {
+    box-sizing: border-box;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.crypto-overview-container {
+    width: 100%;
+    max-width: 1190px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    align-items: center;
+
+    /* gap: 10px; */
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.crypto-overview-content {
+    width: 100%;
+    min-width: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.crypto-overview-content h2 {
+    margin: 0 0 24px;
+
+    color: #fff;
+    font-family: inherit;
+
+    font-size: clamp(34px, 3.3vw, 50px);
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: -1.2px;
+}
+
+.crypto-overview-content p {
+    max-width: 510px;
+    margin: 0 0 32px;
+
+    color: rgba(255, 255, 255, 0.96);
+    font-family: inherit;
+
+    font-size: clamp(14px, 1.1vw, 16px);
+    font-weight: 400;
+    line-height: 2;
+}
+
+/* =========================================
+   SUBSCRIBE BUTTON
+========================================= */
+
+.crypto-overview-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+
+    min-height: 51px;
+    padding: 0 27px;
+
+    border-radius: 50px;
+    background: #3028f4;
+    border: 1px solid transparent;
+
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.crypto-overview-btn span {
+    font-size: 23px;
+    line-height: 1;
+    transition: transform 0.25s ease;
+}
+
+.crypto-overview-btn:hover {
+    color: #fff;
+    background: #453dff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(48, 40, 244, 0.24);
+}
+
+.crypto-overview-btn:hover span {
+    transform: translateX(4px);
+}
+
+/* =========================================
+   RIGHT IMAGE
+========================================= */
+
+.crypto-overview-visual {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: transparent;
+}
+
+.crypto-overview-visual img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    max-width: 620px;
+
+    object-fit: contain;
+    object-position: center;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* =========================================
+   LAPTOP: 1200px
+========================================= */
+
+@media (max-width: 1200px) {
+    .crypto-overview-section {
+        padding-inline: 32px;
+    }
+
+    .crypto-overview-container {
+        max-width: 1050px;
+        gap: 38px;
+    }
+
+    .crypto-overview-content h2 {
+        font-size: clamp(32px, 3.5vw, 43px);
+    }
+
+    .crypto-overview-visual img {
+        max-width: 540px;
+    }
+}
+
+/* =========================================
+   TABLET: 850px
+========================================= */
+
+@media (max-width: 850px) {
+    .crypto-overview-section {
+        padding: 45px 24px;
+    }
+
+    .crypto-overview-container {
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: 24px;
+    }
+
+    .crypto-overview-content h2 {
+        font-size: clamp(27px, 4vw, 35px);
+        letter-spacing: -0.7px;
+        margin-bottom: 18px;
+    }
+
+    .crypto-overview-content p {
+        font-size: 13px;
+        line-height: 1.85;
+        margin-bottom: 24px;
+    }
+
+    .crypto-overview-btn {
+        min-height: 45px;
+        padding: 0 19px;
+        font-size: 13px;
+    }
+
+    .crypto-overview-visual img {
+        max-width: 100%;
+    }
+}
+
+/* =========================================
+   MOBILE: 600px
+========================================= */
+
+@media (max-width: 600px) {
+    .crypto-overview-section {
+        padding: 38px 18px;
+    }
+
+    .crypto-overview-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .crypto-overview-content h2 {
+        font-size: clamp(30px, 7.5vw, 39px);
+        line-height: 1.2;
+        letter-spacing: -0.8px;
+        margin-bottom: 17px;
+    }
+
+    .crypto-overview-content p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.85;
+        margin-bottom: 23px;
+    }
+
+    .crypto-overview-visual {
+        width: 100%;
+        max-width: 480px;
+        margin-inline: auto;
+    }
+
+    .crypto-overview-visual img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .crypto-overview-btn {
+        min-height: 47px;
+        padding-inline: 22px;
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE: 400px
+========================================= */
+
+@media (max-width: 400px) {
+    .crypto-overview-section {
+        padding: 30px 14px;
+    }
+
+    .crypto-overview-container {
+        gap: 24px;
+    }
+
+    .crypto-overview-content h2 {
+        font-size: 35px;
+    }
+
+    .crypto-overview-content p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .crypto-overview-btn {
+        min-height: 44px;
+        padding-inline: 18px;
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   EXTRA SMALL MOBILE: 320px
+========================================= */
+
+@media (max-width: 320px) {
+    .crypto-overview-section {
+        padding-inline: 11px;
+    }
+
+    .crypto-overview-content h2 {
+        font-size: 26px;
+    }
+
+    .crypto-overview-content p {
+        font-size: 12.5px;
+    }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .crypto-overview-btn,
+    .crypto-overview-btn span {
+        transition: none;
+    }
+}
