@@ -13,7 +13,7 @@
   width: 100%;
   padding: clamp(34px, 5vw, 76px) clamp(18px, 4.5vw, 72px) clamp(48px, 6vw, 90px);
   color: var(--forex-text);
-  background: red;
+  background: transparent;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
   box-sizing: border-box;
@@ -410,6 +410,7 @@
 
   color: var(--forex-text);
   padding: clamp(40px, 5vw, 80px) 0;
+   font-family: "Poppins", sans-serif;
 }
 
 .forex-container {
@@ -427,6 +428,7 @@
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(32px, 5vw, 72px);
+  margin-top: -20px;
 }
 
 .forex-bottom {

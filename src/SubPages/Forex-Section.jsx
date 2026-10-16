@@ -1,6 +1,8 @@
 import React from "react";
 import "./Forex-Section.css";
 import ring from "../assets/ring.webp";
+import transactionImage from "../assets/right-recent-Transaction.webp";
+import forexDashboardImage from "../assets/left-img-forex.webp";
 
 const plans = [
     {
@@ -149,11 +151,10 @@ export default function ForexSection() {
                         {/* TOP RIGHT IMAGE */}
                         <div className="forex-visual forex-visual-top">
                             <img
-                                src="../assets/right-recent-Transaction.webp"
+                                src={transactionImage}
                                 alt="Recent forex transactions dashboard"
                             />
                         </div>
-
                     </div>
 
                     {/* BOTTOM SECTION */}
@@ -162,7 +163,7 @@ export default function ForexSection() {
                         {/* BOTTOM LEFT IMAGE */}
                         <div className="forex-visual forex-visual-bottom">
                             <img
-                                src="../assets/left-img-forex.webp"
+                                src={forexDashboardImage}
                                 alt="Forex trading dashboard overview"
                             />
                         </div>
