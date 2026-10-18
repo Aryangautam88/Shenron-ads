@@ -11,26 +11,31 @@ import ComexServices from "./SubPages/Comex-Services";
 import GuideToKickStart from "./Pages/guide-to-KickStart";
 import FAQ from "./Pages/FAQ";
 
-// Home page
+
 function Home() {
   return (
-    <>
-      <ForexSection />
-      <CryptoSection />
-      <ComexServices />
-      <GuideToKickStart />
-      <FAQ />
-    </>
+    <main>
+      <h1>Welcome to Shenron Global</h1>
+      <p>Explore our Forex, Crypto and Comex services.</p>
+    </main>
   );
 }
 
-// Temporary pages for links whose page content is not ready yet
+function Service() {
+  return (
+    <main>
+      <h1>Our Services</h1>
+      <p>Explore our services and find the right solution for you.</p>
+    </main>
+  );
+}
+
 function PlaceholderPage({ title }) {
   return (
-    <section className="route-placeholder">
+    <main className="route-placeholder">
       <h1>{title}</h1>
       <p>Content for this page will be added soon.</p>
-    </section>
+    </main>
   );
 }
 
@@ -43,7 +48,10 @@ export default function App() {
         {/* Home */}
         <Route path="/" element={<Home />} />
 
-        {/* Services */}
+        {/* Main Service Page */}
+        <Route path="/service" element={<Service />} />
+
+        {/* Individual Service Pages */}
         <Route
           path="/services/forex"
           element={<ForexSection />}
@@ -59,19 +67,14 @@ export default function App() {
           element={<ComexServices />}
         />
 
-        {/* Guide */}
+        {/* Other Pages */}
         <Route
           path="/guide-to-kickstart"
           element={<GuideToKickStart />}
         />
 
-        {/* FAQ */}
-        <Route
-          path="/faq"
-          element={<FAQ />}
-        />
+        <Route path="/faq" element={<FAQ />} />
 
-        {/* Other Navbar links */}
         <Route
           path="/exclusive-deals"
           element={<PlaceholderPage title="Exclusive Deals" />}
@@ -82,7 +85,7 @@ export default function App() {
           element={<PlaceholderPage title="Contact Us" />}
         />
 
-        {/* Unknown route */}
+        {/* 404 */}
         <Route
           path="*"
           element={<PlaceholderPage title="404 - Page Not Found" />}
