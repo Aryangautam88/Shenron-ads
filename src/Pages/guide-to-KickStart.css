@@ -61,11 +61,11 @@
     display: block;
     margin-bottom: 14px;
 
-    color: #ff6238;
+    color: #ffffff;
     font-size: clamp(10px, 0.85vw, 12px);
     font-weight: 700;
     line-height: 1.5;
-    letter-spacing: 0.15px;
+    letter-spacing: 1.15px;
     text-transform: uppercase;
 }
 
@@ -109,7 +109,7 @@
     border: 1px solid transparent;
     border-radius: 50px;
 
-    background: #ff6238;
+    background: #3028f4;
     color: #ffffff;
 
     font-family: inherit;
