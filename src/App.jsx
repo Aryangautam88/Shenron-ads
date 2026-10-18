@@ -11,6 +11,7 @@ import FAQ from "./Pages/FAQ";
 import ForexSection from "./SubPages/Forex-Section";
 import CryptoSection from "./SubPages/Crypto-Section";
 import ComexServices from "./SubPages/Comex-Services";
+import Footer from "./Components/Footer";
 
 // Main Services Landing Page
 function ServicesPage() {
@@ -87,6 +88,7 @@ export default function App() {
           element={<PlaceholderPage title="404 - Page Not Found" />}
         />
       </Routes>
+      <Footer/>
     </>
   );
 }

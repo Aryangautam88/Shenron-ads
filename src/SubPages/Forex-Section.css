@@ -3,8 +3,8 @@
 
 .forex-section {
   --forex-text: #f8f7fb;
-  --forex-muted: #e8e5ee;
-  --forex-line: rgba(236, 231, 245, 0.56);
+  --forex-muted: #ffffff;
+  --forex-line: rgba(214, 206, 228, 0.56);
   --forex-purple: #3928f4;
   --forex-cream: #f1f0f0;
 
@@ -57,16 +57,16 @@
 
 .forex-eyebrow {
   margin: 0 0 12px;
-  color: rgba(246, 239, 255, 0.72);
-  font-size: 11px;
-  font-weight: 600;
+  /* color: rgba(33, 33, 34, 0.72); */
+  font-size: 13px;
+  font-weight: 800;
   letter-spacing: 0.18em;
 }
 
 .forex-hero h1 {
   margin: 0;
   color: #fff;
-  font-size: clamp(42px, 5.1vw, 78px);
+  font-size: clamp(42px, 7.1vw, 78px);
   line-height: 1.12;
   letter-spacing: -0.045em;
   font-weight: 700;
@@ -78,7 +78,7 @@
   color: var(--forex-muted);
   font-size: clamp(13px, 1.05vw, 16px);
   font-weight: 400;
-  line-height: 2.15;
+  line-height: 2.0;
   text-wrap: pretty;
 }
 
@@ -101,6 +101,7 @@
   display: flex;
   flex-direction: column;
   transition: transform 220ms ease, border-color 220ms ease;
+  background: rgba(5, 5, 14, 0.16);
 }
 
 .forex-plan:hover {
@@ -113,6 +114,7 @@
   background: linear-gradient(145deg, #f5f4f4 0%, #e8e7e8 100%);
   border-color: transparent;
   margin-top: 0;
+  
 }
 
 .forex-plan-header {
@@ -120,6 +122,8 @@
   padding: 28px 18px 22px;
   border-bottom: 1px solid var(--forex-line);
   text-align: center;
+  /* color: black; */
+  /* background-color: #fff; */
 }
 
 .forex-plan--featured .forex-plan-header {
@@ -128,7 +132,7 @@
 
 .forex-plan-header h2 {
   margin: 0 0 4px;
-  font-size: clamp(15px, 1.18vw, 20px);
+  font-size: clamp(15px, 1.78vw, 28px);
   line-height: 1.4;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -177,6 +181,8 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 24px clamp(18px, 1.6vw, 28px) 26px;
+  /* color: ; */
+  
 }
 
 .forex-plan-body ul {
