@@ -1,10 +1,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
-import {
-  Link,
-  NavLink,
-  useLocation,
-} from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 const services = [
@@ -20,7 +16,7 @@ function Navbar() {
   const navbarRef = useRef(null);
   const location = useLocation();
 
-  // Close all menus after navigation
+  // Close menus after navigating to another page
   useEffect(() => {
     setMenuOpen(false);
     setServicesOpen(false);
@@ -50,14 +46,8 @@ function Navbar() {
     document.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      document.removeEventListener(
-        "mousedown",
-        handleClickOutside
-      );
-      document.removeEventListener(
-        "touchstart",
-        handleClickOutside
-      );
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
@@ -67,16 +57,19 @@ function Navbar() {
     setServicesOpen(false);
   };
 
+  const toggleServices = () => {
+    setServicesOpen((prev) => !prev);
+  };
+
   return (
     <header className="site-header" ref={navbarRef}>
       <nav className="navbar" aria-label="Main navigation">
-
         {/* Logo */}
         <Link
           to="/"
           className="navbar-brand"
           onClick={closeMenus}
-          aria-label="Billare Beacons home"
+          aria-label="Shenron Global home"
         >
           <span className="brand-mark" aria-hidden="true">
             SG
@@ -84,6 +77,7 @@ function Navbar() {
 
           <span className="brand-name">
             Shenron
+            <br />
             Global
           </span>
         </Link>
@@ -146,11 +140,10 @@ function Navbar() {
               className="nav-link dropdown-trigger"
               aria-expanded={servicesOpen}
               aria-haspopup="true"
-              onClick={() =>
-                setServicesOpen((prev) => !prev)
-              }
+              onClick={toggleServices}
             >
               Services
+
               <svg
                 className="dropdown-chevron"
                 width="12"
@@ -180,14 +173,16 @@ function Navbar() {
                   key={service.path}
                   to={service.path}
                   className={({ isActive }) =>
-                    `dropdown-item ${
-                      isActive ? "active" : ""
-                    }`
+                    `dropdown-item ${isActive ? "active" : ""}`
                   }
                   onClick={closeMenus}
                 >
                   <span>{service.name}</span>
-                  <span className="dropdown-arrow" aria-hidden="true">
+
+                  <span
+                    className="dropdown-arrow"
+                    aria-hidden="true"
+                  >
                     ↗
                   </span>
                 </NavLink>
