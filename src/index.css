@@ -11,59 +11,113 @@ body,
   min-height: 100%;
 }
 
-body {
-  min-height: 100vh;
-  color: white;
+html {
+  scroll-behavior: smooth;
+}
 
-  background-color: #29103f;
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  color: #2F4156;
+  font-family: "Poppins", sans-serif;
+
+  /* Modern blue-lavender mesh gradient */
+  background-color: #B9D8FA;
+
   background-image:
     radial-gradient(
-      ellipse at 85% 10%,
-      rgba(139, 45, 220, 0.8),
-      transparent 55%
+      ellipse 55% 75% at 4% 0%,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(222, 231, 255, 0.55) 30%,
+      transparent 72%
     ),
     radial-gradient(
-      ellipse at 5% 5%,
-      rgba(169, 45, 180, 0.6),
-      transparent 45%
+      ellipse 65% 75% at 36% 25%,
+      rgba(91, 133, 224, 0.92) 0%,
+      rgba(122, 130, 232, 0.72) 36%,
+      transparent 76%
     ),
     radial-gradient(
-      ellipse at 50% 55%,
-      rgba(169, 45, 180, 0.6),
-      transparent 60%
+      ellipse 55% 65% at 5% 100%,
+      rgba(145, 99, 226, 0.95) 0%,
+      rgba(162, 132, 240, 0.65) 40%,
+      transparent 78%
+    ),
+    radial-gradient(
+      ellipse 65% 80% at 100% 0%,
+      rgba(92, 220, 246, 0.88) 0%,
+      rgba(118, 218, 248, 0.72) 42%,
+      transparent 78%
+    ),
+    radial-gradient(
+      ellipse 55% 60% at 90% 55%,
+      rgba(169, 239, 255, 0.92) 0%,
+      rgba(190, 237, 255, 0.6) 48%,
+      transparent 78%
+    ),
+    radial-gradient(
+      ellipse 45% 45% at 58% 100%,
+      rgba(246, 250, 255, 0.95) 0%,
+      rgba(229, 237, 255, 0.65) 48%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse 40% 40% at 48% 65%,
+      rgba(188, 174, 255, 0.65) 0%,
+      transparent 78%
     ),
     linear-gradient(
       135deg,
-      #351044,
-      #29103f,
-      #1e1038
+      #C8D8FA 0%,
+      #91B9F2 35%,
+      #B2E9FA 70%,
+      #E9F8FF 100%
     );
 
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
+
+  overflow-x: hidden;
 }
 
-/* Dotted texture */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-
-  background-image: radial-gradient(
-    rgba(230, 205, 255, 0.4) 0.7px,
-    transparent 0.9px
-  );
-
-  background-size: 6px 8px;
-  opacity: 0.45;
-}
-
-/* Keep page content above the dots */
 #root {
   position: relative;
-  z-index: 1;
+  width: 100%;
   min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: #7E4BA8;
+  color: #FFFFFF;
+}
+
+/* Let the global gradient show through */
+section,
+main {
+  background-color: transparent;
+}
+
+/* Keep the gradient stable on mobile */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+  }
 }
