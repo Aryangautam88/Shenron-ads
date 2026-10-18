@@ -1,36 +1,29 @@
-<<<<<<< HEAD
 
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./Components/Navbar";
 
+import Home from "./Pages/Home";
+import GuideToKickStart from "./Pages/guide-to-KickStart";
+import FAQ from "./Pages/FAQ";
+
 import ForexSection from "./SubPages/Forex-Section";
 import CryptoSection from "./SubPages/Crypto-Section";
 import ComexServices from "./SubPages/Comex-Services";
 
-import GuideToKickStart from "./Pages/guide-to-KickStart";
-import FAQ from "./Pages/FAQ";
-
-
-function Home() {
+// Main Services Landing Page
+function ServicesPage() {
   return (
-    <main>
-      <h1>Welcome to Shenron Global</h1>
-      <p>Explore our Forex, Crypto and Comex services.</p>
+    <main className="services-landing-page">
+      <ForexSection />
+      <CryptoSection />
+      <ComexServices />
     </main>
   );
 }
 
-function Service() {
-  return (
-    <main>
-      <h1>Our Services</h1>
-      <p>Explore our services and find the right solution for you.</p>
-    </main>
-  );
-}
-
+// Temporary pages
 function PlaceholderPage({ title }) {
   return (
     <main className="route-placeholder">
@@ -46,13 +39,13 @@ export default function App() {
       <Navbar />
 
       <Routes>
-        {/* Home */}
+        {/* Home Page */}
         <Route path="/" element={<Home />} />
 
-        {/* Main Service Page */}
-        <Route path="/service" element={<Service />} />
+        {/* Main Services Page */}
+        <Route path="/service" element={<ServicesPage />} />
 
-        {/* Individual Service Pages */}
+        {/* Individual Services */}
         <Route
           path="/services/forex"
           element={<ForexSection />}
@@ -68,14 +61,16 @@ export default function App() {
           element={<ComexServices />}
         />
 
-        {/* Other Pages */}
+        {/* Guide Page */}
         <Route
           path="/guide-to-kickstart"
           element={<GuideToKickStart />}
         />
 
+        {/* FAQ Page */}
         <Route path="/faq" element={<FAQ />} />
 
+        {/* Other Pages */}
         <Route
           path="/exclusive-deals"
           element={<PlaceholderPage title="Exclusive Deals" />}
@@ -86,7 +81,7 @@ export default function App() {
           element={<PlaceholderPage title="Contact Us" />}
         />
 
-        {/* 404 */}
+        {/* 404 Page */}
         <Route
           path="*"
           element={<PlaceholderPage title="404 - Page Not Found" />}
@@ -95,30 +90,3 @@ export default function App() {
     </>
   );
 }
-=======
-import React from 'react'
-import './App.css'
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-// import ForexSection from "./SubPages/Forex-Section";
-// import CryptoSection from './SubPages/Crypto-Section';
-// import ComexServices from './SubPages/Comex-Services';
-// import GuideToKickStart from './Pages/guide-to-KickStart';
-import FAQ from './Pages/FAQ';
-function App() {
-  return (
-    <>
-    <Navbar/>
-    <Home/>
-      {/* <ForexSection /> */}
-      {/* <CryptoSection/> */}
-      {/* <ComexServices/> */}
-      {/* <GuideToKickStart/> */}
-      <FAQ/>
-
-    </>
-  );
-}
-
-export default App;
->>>>>>> a4f4f762e994a1d4efff643a455c71cf5a4de320
