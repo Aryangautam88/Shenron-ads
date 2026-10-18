@@ -1,85 +1,175 @@
 
+/* ==========================================
+   SHENRON GLOBAL
+   Blue-Lavender Gradient + Geometric Texture
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
 html,
 body,
 #root {
+  width: 100%;
   min-height: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
-  color: #2F4156;
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+
+  color: #2f4156;
   font-family: "Poppins", sans-serif;
 
-  /* Modern blue-lavender mesh gradient */
-  background-color: #B9D8FA;
+  /* Base gradient */
+  background-color: #b9d8fa;
 
   background-image:
+    /* Top blue glow */
     radial-gradient(
-      ellipse 55% 75% at 4% 0%,
-      rgba(255, 255, 255, 0.95) 0%,
-      rgba(222, 231, 255, 0.55) 30%,
+      ellipse at 50% 0%,
+      rgba(31, 100, 220, 0.95) 0%,
+      rgba(42, 115, 229, 0.72) 25%,
+      transparent 65%
+    ),
+
+    /* Left lavender glow */
+    radial-gradient(
+      ellipse at 0% 35%,
+      rgba(145, 116, 244, 0.7) 0%,
+      transparent 48%
+    ),
+
+    /* Right cyan glow */
+    radial-gradient(
+      ellipse at 100% 40%,
+      rgba(92, 204, 247, 0.8) 0%,
+      transparent 48%
+    ),
+
+    /* Center blue-lavender glow */
+    radial-gradient(
+      ellipse at 50% 48%,
+      rgba(105, 153, 247, 0.95) 0%,
+      rgba(125, 158, 245, 0.75) 35%,
       transparent 72%
     ),
-    radial-gradient(
-      ellipse 65% 75% at 36% 25%,
-      rgba(91, 133, 224, 0.92) 0%,
-      rgba(122, 130, 232, 0.72) 36%,
-      transparent 76%
+
+    /* Bottom white fade */
+    linear-gradient(
+      to bottom,
+      transparent 45%,
+      rgba(228, 239, 255, 0.4) 72%,
+      #f7faff 100%
     ),
-    radial-gradient(
-      ellipse 55% 65% at 5% 100%,
-      rgba(145, 99, 226, 0.95) 0%,
-      rgba(162, 132, 240, 0.65) 40%,
-      transparent 78%
-    ),
-    radial-gradient(
-      ellipse 65% 80% at 100% 0%,
-      rgba(92, 220, 246, 0.88) 0%,
-      rgba(118, 218, 248, 0.72) 42%,
-      transparent 78%
-    ),
-    radial-gradient(
-      ellipse 55% 60% at 90% 55%,
-      rgba(169, 239, 255, 0.92) 0%,
-      rgba(190, 237, 255, 0.6) 48%,
-      transparent 78%
-    ),
-    radial-gradient(
-      ellipse 45% 45% at 58% 100%,
-      rgba(246, 250, 255, 0.95) 0%,
-      rgba(229, 237, 255, 0.65) 48%,
-      transparent 80%
-    ),
-    radial-gradient(
-      ellipse 40% 40% at 48% 65%,
-      rgba(188, 174, 255, 0.65) 0%,
-      transparent 78%
-    ),
+
+    /* Overall color blend */
     linear-gradient(
       135deg,
-      #C8D8FA 0%,
-      #91B9F2 35%,
-      #B2E9FA 70%,
-      #E9F8FF 100%
+      #174d9e 0%,
+      #538ce8 30%,
+      #a4c7f8 65%,
+      #eaf5ff 100%
     );
 
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
-
-  overflow-x: hidden;
+  background-attachment: fixed;
 }
+
+/* ==========================================
+   REPEATING GEOMETRIC TEXTURE
+   Small arrow-like / diamond pattern
+========================================== */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    /* Small diagonal strokes */
+    repeating-linear-gradient(
+      135deg,
+      transparent 0px,
+      transparent 4px,
+      rgba(255, 255, 255, 0.32) 4.5px,
+      transparent 5.5px,
+      transparent 8px
+    ),
+
+    /* Opposite diagonal strokes */
+    repeating-linear-gradient(
+      45deg,
+      transparent 0px,
+      transparent 4px,
+      rgba(12, 57, 133, 0.2) 4.5px,
+      transparent 5.5px,
+      transparent 8px
+    );
+
+  background-size: 8px 8px;
+  opacity: 0.7;
+
+  /* Soft fade toward the bottom */
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 52%,
+    rgba(0, 0, 0, 0.65) 72%,
+    transparent 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 52%,
+    rgba(0, 0, 0, 0.65) 72%,
+    transparent 100%
+  );
+}
+
+/* ==========================================
+   SOFT CENTER LIGHT
+========================================== */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 46%,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.06) 30%,
+      transparent 65%
+    );
+}
+
+/* ==========================================
+   ROOT
+========================================== */
 
 #root {
   position: relative;
@@ -87,11 +177,19 @@ body {
   min-height: 100vh;
 }
 
+/* ==========================================
+   GLOBAL ELEMENTS
+========================================== */
+
 button,
 input,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  cursor: pointer;
 }
 
 a {
@@ -101,23 +199,87 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
+/* Text selection */
 ::selection {
-  background: #7E4BA8;
-  color: #FFFFFF;
+  background: #7e4ba8;
+  color: #ffffff;
 }
 
-/* Let the global gradient show through */
-section,
-main {
+/* ==========================================
+   TRANSPARENT PAGE SECTIONS
+========================================== */
+
+main,
+section {
   background-color: transparent;
 }
 
-/* Keep the gradient stable on mobile */
+/* ==========================================
+   MOBILE RESPONSIVE BACKGROUND
+========================================== */
+
 @media (max-width: 768px) {
   body {
     background-attachment: scroll;
-    background-size: cover;
+    background-size: auto, auto, auto, auto, auto, cover;
+  }
+
+  body::before,
+  body::after {
+    position: absolute;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  body {
+    background-color: #a8c9f5;
+
+    background-image:
+      radial-gradient(
+        ellipse at 50% 0%,
+        rgba(49, 108, 215, 0.85),
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse at 90% 40%,
+        rgba(129, 208, 245, 0.65),
+        transparent 60%
+      ),
+      linear-gradient(
+        180deg,
+        #6096e8 0%,
+        #b8d5f9 58%,
+        #f7faff 100%
+      );
+
+    background-attachment: scroll;
+  }
+
+  body::before {
+    opacity: 0.5;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

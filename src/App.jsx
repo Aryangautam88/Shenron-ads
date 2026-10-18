@@ -1,25 +1,92 @@
-import React from 'react'
-import './App.css'
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-// import ForexSection from "./SubPages/Forex-Section";
-// import CryptoSection from './SubPages/Crypto-Section';
-// import ComexServices from './SubPages/Comex-Services';
-// import GuideToKickStart from './Pages/guide-to-KickStart';
-import FAQ from './Pages/FAQ';
-function App() {
-  return (
-    <>
-    <Navbar/>
-    <Home/>
-      {/* <ForexSection /> */}
-      {/* <CryptoSection/> */}
-      {/* <ComexServices/> */}
-      {/* <GuideToKickStart/> */}
-      <FAQ/>
 
-    </>
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+import Navbar from "./Components/Navbar";
+
+import Home from "./Pages/Home";
+import GuideToKickStart from "./Pages/guide-to-KickStart";
+import FAQ from "./Pages/FAQ";
+
+import ForexSection from "./SubPages/Forex-Section";
+import CryptoSection from "./SubPages/Crypto-Section";
+import ComexServices from "./SubPages/Comex-Services";
+
+// Main Services Landing Page
+function ServicesPage() {
+  return (
+    <main className="services-landing-page">
+      <ForexSection />
+      <CryptoSection />
+      <ComexServices />
+    </main>
   );
 }
 
-export default App;
+// Temporary pages
+function PlaceholderPage({ title }) {
+  return (
+    <main className="route-placeholder">
+      <h1>{title}</h1>
+      <p>Content for this page will be added soon.</p>
+    </main>
+  );
+}
+
+export default function App() {
+  return (
+    <>
+      <Navbar />
+
+      <Routes>
+        {/* Home Page */}
+        <Route path="/" element={<Home />} />
+
+        {/* Main Services Page */}
+        <Route path="/service" element={<ServicesPage />} />
+
+        {/* Individual Services */}
+        <Route
+          path="/services/forex"
+          element={<ForexSection />}
+        />
+
+        <Route
+          path="/services/crypto"
+          element={<CryptoSection />}
+        />
+
+        <Route
+          path="/services/comex"
+          element={<ComexServices />}
+        />
+
+        {/* Guide Page */}
+        <Route
+          path="/guide-to-kickstart"
+          element={<GuideToKickStart />}
+        />
+
+        {/* FAQ Page */}
+        <Route path="/faq" element={<FAQ />} />
+
+        {/* Other Pages */}
+        <Route
+          path="/exclusive-deals"
+          element={<PlaceholderPage title="Exclusive Deals" />}
+        />
+
+        <Route
+          path="/contact"
+          element={<PlaceholderPage title="Contact Us" />}
+        />
+
+        {/* 404 Page */}
+        <Route
+          path="*"
+          element={<PlaceholderPage title="404 - Page Not Found" />}
+        />
+      </Routes>
+    </>
+  );
+}

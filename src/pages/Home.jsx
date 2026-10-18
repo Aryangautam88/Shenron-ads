@@ -122,11 +122,6 @@ function Home() {
               We offer daily Crypto and Forex market insights based
               on technical analysis and relevant indicators.
             </p>
-
-            <Link to="/services/forex" className="hero-button">
-              Explore Our Services
-              <span aria-hidden="true">→</span>
-            </Link>
           </div>
 
           {/* Trading dashboard composition */}
