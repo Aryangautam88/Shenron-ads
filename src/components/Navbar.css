@@ -28,7 +28,6 @@
 
 .navbar {
   position: relative;
-
   width: 100%;
   max-width: 1370px;
   min-height: 68px;
@@ -73,7 +72,6 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-
   flex-shrink: 0;
 
   color: var(--nav-text);
@@ -87,17 +85,15 @@
   display: grid;
   place-items: center;
 
-  background: var(--nav-purple);
-  border: 1px solid rgba(126, 75, 168, 0.20);
+  background: #3928F4;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 50%;
 
   color: #FFFFFF;
-
   font-size: 22px;
   font-weight: 700;
 
-  box-shadow:
-    0 3px 10px rgba(126, 75, 168, 0.18);
+  box-shadow: 0 3px 10px rgba(126, 75, 168, 0.18);
 
   transition:
     background 0.25s ease,
@@ -105,13 +101,12 @@
 }
 
 .navbar-brand:hover .brand-mark {
-  background: #693A91;
+  background: #4e68d0;
   transform: scale(1.04);
 }
 
 .brand-name {
-  color: #30304D;
-
+  color: #29264A;
   font-size: 19px;
   font-weight: 750;
   line-height: 1.05;
@@ -126,7 +121,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
   gap: clamp(15px, 1.8vw, 27px);
 }
 
@@ -143,7 +137,7 @@
   border: none;
   background: transparent;
 
-  color: #060606;
+  color: #343451;
   text-decoration: none;
   white-space: nowrap;
 
@@ -152,14 +146,13 @@
   font-weight: 600;
 
   cursor: pointer;
-
   transition: color 0.25s ease;
 }
 
 .nav-link:hover,
 .nav-link.active,
 .dropdown-open > .nav-link {
-  color: #6777ec;
+  color: #3928F4;
 }
 
 /* Animated underline */
@@ -200,7 +193,6 @@
 
 .dropdown-chevron {
   flex-shrink: 0;
-
   transition: transform 0.25s ease;
 }
 
@@ -234,7 +226,7 @@
   background: rgba(255, 255, 255, 0.92);
 
   border: 1px solid rgba(255, 255, 255, 0.98);
-  border-top: 2px solid rgba(126, 75, 168, 0.60);
+  border-top: 2px solid rgba(79, 45, 215, 0.6);
   border-radius: 18px;
 
   -webkit-backdrop-filter: blur(28px) saturate(150%);
@@ -289,12 +281,11 @@
   padding: 8px 10px 10px;
   margin-bottom: 4px;
 
-  border-bottom: 1px solid rgba(126, 75, 168, 0.13);
+  border-bottom: 1px solid #3928F4;
 }
 
 .dropdown-heading > span {
-  color: var(--nav-purple);
-
+  color: #3928F4;
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 1.5px;
@@ -302,8 +293,7 @@
 
 .dropdown-heading p {
   margin-top: 4px;
-
-  color: #74758D;
+  color: #77738F;
   font-size: 11px;
 }
 
@@ -316,10 +306,9 @@
   gap: 10px;
 
   padding: 10px;
-
   border-radius: 9px;
 
-  color: #42415C;
+  color: #343451;
   text-decoration: none;
 
   font-size: 12px;
@@ -333,10 +322,8 @@
 
 .dropdown-item:hover,
 .dropdown-item.active {
-  color: var(--nav-purple);
-
+  color: #3928F4;
   background: rgba(126, 75, 168, 0.10);
-
   padding-left: 13px;
 }
 
@@ -370,13 +357,13 @@
   gap: 10px;
 
   padding: 11px 18px;
-
   flex-shrink: 0;
 
   border: 1px solid #fff;
   border-radius: 50px;
 
-  background: #69AEF2;
+  /* YOUR ORIGINAL CTA COLOR */
+  background: #3928F4;
 
   color: #FFFFFF;
   text-decoration: none;
@@ -393,7 +380,6 @@
 
 .navbar-cta span {
   font-size: 16px;
-
   transition: transform 0.25s ease;
 }
 
@@ -560,8 +546,7 @@
     -webkit-backdrop-filter: blur(28px) saturate(150%);
     backdrop-filter: blur(28px) saturate(150%);
 
-    box-shadow:
-      0 16px 38px rgba(49, 43, 90, 0.14);
+    box-shadow: 0 16px 38px rgba(49, 43, 90, 0.14);
 
     opacity: 0;
     visibility: hidden;
@@ -592,13 +577,13 @@
     width: 100%;
     padding: 12px 10px;
 
-    color: #42415C;
+    color: #343451;
     font-size: 14px;
   }
 
   .navbar-navigation > .nav-link:hover,
   .navbar-navigation > .nav-link.active {
-    color: var(--nav-purple);
+    color: #3928F4;
   }
 
   .nav-link::after {
@@ -621,7 +606,7 @@
     width: 100%;
     padding: 12px 10px;
 
-    color: #42415C;
+    color: #343451;
     font-size: 14px;
   }
 
@@ -639,7 +624,7 @@
     background: rgba(246, 242, 251, 0.96);
 
     border: 1px solid rgba(126, 75, 168, 0.12);
-    border-top: 2px solid rgba(126, 75, 168, 0.55);
+    border-top: 2px solid #3928F4;
     border-radius: 13px;
 
     box-shadow: none;
@@ -679,16 +664,16 @@
   }
 
   .dropdown-heading > span {
-    color: var(--nav-purple);
+    color: #3928F4;
   }
 
   .dropdown-heading p {
-    color: #74758D;
+    color: #77738F;
   }
 
   .dropdown-item {
     padding: 10px;
-    color: #42415C;
+    color: #343451;
     font-size: 12px;
   }
 
@@ -696,7 +681,7 @@
   .dropdown-item.active {
     padding-left: 13px;
 
-    color: var(--nav-purple);
+    color: #3928F4;
     background: rgba(126, 75, 168, 0.10);
   }
 

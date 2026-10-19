@@ -1,5 +1,4 @@
-
-import React from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import phone from "../assets/phone.webp";
@@ -99,13 +98,36 @@ const features = [
 
 
 function Home() {
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const hero = heroRef.current;
+
+    if (!hero) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          hero.classList.add("is-visible");
+          observer.unobserve(hero);
+        }
+      },
+      {
+        threshold: 0.12,
+      }
+    );
+
+    observer.observe(hero);
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <>
 
 
 
 
-      <main className="home-hero">
+      <main className="home-hero" ref={heroRef}>
         <div className="home-hero-inner">
 
           {/* Hero heading */}
